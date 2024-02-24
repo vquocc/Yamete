@@ -8,9 +8,16 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class TestLo {
@@ -22,6 +29,7 @@ public class TestLo {
 	private JLabel _Te;
 	private JLabel _Ku_Da;
 	private JButton btnNewButton_SAiiiii;
+	Clip clip;
 
 	/**
 	 * Launch the application.
@@ -57,6 +65,14 @@ public class TestLo {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		File file = new File("E:\\JavaNew\\Test\\src\\com\\vq\\vine-boom2.wav");
+		try {
+			AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+			clip = AudioSystem.getClip();
+			clip.open(audio);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 		frame = new JFrame();
 		frame.setIconImage(Toolkit.getDefaultToolkit()
 				.getImage("E:\\Thư mục mới\\Oxygen-Icons.org-Oxygen-Apps-accessories-calculator.32.png"));
@@ -137,6 +153,7 @@ public class TestLo {
 			Thread.sleep(1000);
 			this._Ku_Da.setVisible(true);
 			System.out.println("5");
+			clip.start();
 			Thread.sleep(1000);
 			btnNewButton_SAiiiii.setVisible(true);
 		} catch (InterruptedException e) {

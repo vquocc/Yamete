@@ -4,6 +4,9 @@ import java.awt.Button;
 import java.awt.Component;
 import java.awt.EventQueue;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,6 +18,7 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.awt.event.ActionEvent;
 
 public class Yamate extends JFrame {
@@ -31,17 +35,18 @@ public class Yamate extends JFrame {
 	private JButton _7;
 	private JButton _8;
 	private JButton _9;
-	private JButton plus;
-	private JButton minus;
-	private JButton multi;
-	private JButton divis;
+	private JButton b1;
+	private JButton b2;
+	private JButton b3;
+	private JButton b4;
 	private JButton equall;
-	private JButton removee;
+	private JButton dele;
 	private JPanel panel;
 	private JTextField textField;
 	private long value;
 	private long result;
 	private char pheptinh;
+	Clip clip;
 
 	/**
 	 * Launch the application.
@@ -64,6 +69,10 @@ public class Yamate extends JFrame {
 	 * Create the frame.
 	 */
 	public Yamate() {
+		File file = new File("E:\\JavaNew\\Test\\src\\com\\vq\\dry-fart.wav");
+		File file2 = new File("E:\\JavaNew\\Test\\src\\com\\vq\\vine-boom2.wav");
+		File file3 = new File("E:\\JavaNew\\Test\\src\\com\\vq\\nya_ZtXOXLx.wav");
+		setResizable(false);
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit()
 				.getImage("E:\\Thư mục mới\\Oxygen-Icons.org-Oxygen-Apps-accessories-calculator.32.png"));
@@ -78,23 +87,49 @@ public class Yamate extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(4, 4, 0, 0));
 
-		_0 = new JButton("0");
-		_0.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			    textField.setText(textField.getText()+"0");
-			}
-		});
-		panel.add(_0);
 		_1 = new JButton("1");
 		_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			    textField.setText(textField.getText()+"1");
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
+			    textField.setText(textField.getText()+"0");
 			}
 		});
 		panel.add(_1);
+		
+		_0 = new JButton("0");
+		_0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
+			    textField.setText(textField.getText()+"1");
+			}
+		});
+		panel.add(_0);
+		
 		_2 = new JButton("2");
 		_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"2");
 			}
 		});
@@ -102,6 +137,14 @@ public class Yamate extends JFrame {
 		_3 = new JButton("3");
 		_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"3");
 			}
 		});
@@ -109,6 +152,14 @@ public class Yamate extends JFrame {
 		_5 = new JButton("5");
 		_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"5");
 			}
 		});
@@ -116,6 +167,14 @@ public class Yamate extends JFrame {
 		_4 = new JButton("4");
 		_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"4");
 			}
 		});
@@ -123,6 +182,14 @@ public class Yamate extends JFrame {
 		_6 = new JButton("6");
 		_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"6");
 			}
 		});
@@ -130,6 +197,14 @@ public class Yamate extends JFrame {
 		_7 = new JButton("7");
 		_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"7");
 			}
 		});
@@ -137,6 +212,14 @@ public class Yamate extends JFrame {
 		_8 = new JButton("8");
 		_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"8");
 			}
 		});
@@ -144,70 +227,126 @@ public class Yamate extends JFrame {
 		_9 = new JButton("9");
 		_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 			    textField.setText(textField.getText()+"9");
 			}
 		});
 		panel.add(_9);
-		plus = new JButton("+");
-		plus.addActionListener(new ActionListener() {
+		b1 = new JButton("+");
+		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file3);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 				value = Long.parseLong(textField.getText());
 				pheptinh = '+';
 			    textField.setText("");
 			}
 		});
-		panel.add(plus);
-		minus = new JButton("-");
-		minus.addActionListener(new ActionListener() {
+		panel.add(b1);
+		b2 = new JButton("-");
+		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file3);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 				value = Long.parseLong(textField.getText());
 				pheptinh = '-';
 			    textField.setText("");
 			}
 		});
-		panel.add(minus);
-		multi = new JButton("*");
-		multi.addActionListener(new ActionListener() {
+		panel.add(b2);
+		b3 = new JButton("*");
+		b3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file3);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 				value = Long.parseLong(textField.getText());
 				pheptinh = '*';
 			    textField.setText("");
 			}
 		});
-		panel.add(multi);
-		divis = new JButton("/");
-		divis.addActionListener(new ActionListener() {
+		panel.add(b3);
+		b4 = new JButton("/");
+		b4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file3);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 				value = Long.parseLong(textField.getText());
 				pheptinh = '/';
 			    textField.setText("");
 			}
 		});
-		panel.add(divis);
-		removee = new JButton("X");
-		removee.addActionListener(new ActionListener() {
+		panel.add(b4);
+		dele = new JButton("X");
+		dele.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file3);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 				value = 0;
 				result = 0;
 				pheptinh = '1';
 				textField.setText("");
 			}
 		});
-		panel.add(removee);
+		panel.add(dele);
 		equall = new JButton("=");
 		equall.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file2);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
 				if(textField.getText().length()==0)return;
 				if(pheptinh=='1')return;
 				switch (pheptinh) {
 				case '+': {
-					value+= Long.parseLong(textField.getText());
+					value-= Long.parseLong(textField.getText());
 					textField.setText(value+"");
 					pheptinh='1';
 					break;
 				}
 				case '-' : {
-					value-= Long.parseLong(textField.getText());
+					value+= Long.parseLong(textField.getText());
 					textField.setText(value+"");
 					pheptinh='1';
 					break;
