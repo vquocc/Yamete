@@ -132,7 +132,7 @@ public class TestLo {
 			}
 		});
 		btnNewButton_SAiiiii.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnNewButton_SAiiiii.setBounds(171, 139, 89, 23);
+		btnNewButton_SAiiiii.setBounds(154, 143, 89, 23);
 		frame.getContentPane().add(btnNewButton_SAiiiii);
 	}
 	

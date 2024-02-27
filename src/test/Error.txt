@@ -1,0 +1,11 @@
+- Giao diện chưa hoàn chỉnh thiếu chuyên nghiệp mắc những lỗi như sai chính tả, bố cục không đều
+- Tên phần mềm không được đề cập
+- Các phím chức năng không đúng vị trí
+- Sai giá trị của phím số cụ thể (1 & 0)
+- Chứa các sound effect không cần thiết
+- Dấu trừ và dấu + hoạt động không chính xác
+- Chưa xử lý exception cho project
+- Tên biến đặt không có ý nghĩa khó cho việc maintance
+- Không tách ra từng file riêng biệt (view - controller)
+- Code không sạch => cụ thể code lặp lại khá nhiều không tối ưu hiệu năng
+- Tên Biến Lỏ Dái

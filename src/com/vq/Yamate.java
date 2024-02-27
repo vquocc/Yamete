@@ -20,21 +20,23 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class Yamate extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton _0;
-	private JButton _1;
-	private JButton _2;
-	private JButton _3;
-	private JButton _4;
-	private JButton _5;
-	private JButton _6;
-	private JButton _7;
-	private JButton _8;
-	private JButton _9;
+	private JButton Newbutton_0;
+	private JButton Newbutton_1;
+	private JButton Newbutton_2;
+	private JButton Newbutton_3;
+	private JButton Newbutton_4;
+	private JButton Newbutton_5;
+	private JButton Newbutton_6;
+	private JButton Newbutton_7;
+	private JButton Newbutton_8;
+	private JButton Newbutton_9;
 	private JButton b1;
 	private JButton b2;
 	private JButton b3;
@@ -72,12 +74,13 @@ public class Yamate extends JFrame {
 		File file = new File("E:\\JavaNew\\Test\\src\\com\\vq\\dry-fart.wav");
 		File file2 = new File("E:\\JavaNew\\Test\\src\\com\\vq\\vine-boom2.wav");
 		File file3 = new File("E:\\JavaNew\\Test\\src\\com\\vq\\nya_ZtXOXLx.wav");
+		File file4 = new File("E:\\JavaNew\\Test\\src\\com\\vq\\piuw.wav");
 		setResizable(false);
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit()
 				.getImage("E:\\Thư mục mới\\Oxygen-Icons.org-Oxygen-Apps-accessories-calculator.32.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 407);
+		setBounds(100, 100, 471, 407);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -87,8 +90,8 @@ public class Yamate extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(4, 4, 0, 0));
 
-		_1 = new JButton("1");
-		_1.addActionListener(new ActionListener() {
+		Newbutton_1 = new JButton("1");
+		Newbutton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -101,10 +104,10 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"0");
 			}
 		});
-		panel.add(_1);
+		panel.add(Newbutton_1);
 		
-		_0 = new JButton("0");
-		_0.addActionListener(new ActionListener() {
+		Newbutton_0 = new JButton("0");
+		Newbutton_0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -117,10 +120,10 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"1");
 			}
 		});
-		panel.add(_0);
+		panel.add(Newbutton_0);
 		
-		_2 = new JButton("2");
-		_2.addActionListener(new ActionListener() {
+		Newbutton_2 = new JButton("2");
+		Newbutton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -133,9 +136,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"2");
 			}
 		});
-		panel.add(_2);
-		_3 = new JButton("3");
-		_3.addActionListener(new ActionListener() {
+		panel.add(Newbutton_2);
+		Newbutton_3 = new JButton("3");
+		Newbutton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -148,9 +151,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"3");
 			}
 		});
-		panel.add(_3);
-		_5 = new JButton("5");
-		_5.addActionListener(new ActionListener() {
+		panel.add(Newbutton_3);
+		Newbutton_5 = new JButton("5");
+		Newbutton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -163,9 +166,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"5");
 			}
 		});
-		panel.add(_5);
-		_4 = new JButton("4");
-		_4.addActionListener(new ActionListener() {
+		panel.add(Newbutton_5);
+		Newbutton_4 = new JButton("4");
+		Newbutton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -178,9 +181,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"4");
 			}
 		});
-		panel.add(_4);
-		_6 = new JButton("6");
-		_6.addActionListener(new ActionListener() {
+		panel.add(Newbutton_4);
+		Newbutton_6 = new JButton("6");
+		Newbutton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -193,9 +196,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"6");
 			}
 		});
-		panel.add(_6);
-		_7 = new JButton("7");
-		_7.addActionListener(new ActionListener() {
+		panel.add(Newbutton_6);
+		Newbutton_7 = new JButton("7");
+		Newbutton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -208,9 +211,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"7");
 			}
 		});
-		panel.add(_7);
-		_8 = new JButton("8");
-		_8.addActionListener(new ActionListener() {
+		panel.add(Newbutton_7);
+		Newbutton_8 = new JButton("8");
+		Newbutton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -223,9 +226,9 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"8");
 			}
 		});
-		panel.add(_8);
-		_9 = new JButton("9");
-		_9.addActionListener(new ActionListener() {
+		panel.add(Newbutton_8);
+		Newbutton_9 = new JButton("9");
+		Newbutton_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					AudioInputStream audio = AudioSystem.getAudioInputStream(file);
@@ -238,7 +241,7 @@ public class Yamate extends JFrame {
 			    textField.setText(textField.getText()+"9");
 			}
 		});
-		panel.add(_9);
+		panel.add(Newbutton_9);
 		b1 = new JButton("+");
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -376,6 +379,22 @@ public class Yamate extends JFrame {
 		panel.add(equall);
 		
 		textField = new JTextField();
+		textField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				try {
+					AudioInputStream audio = AudioSystem.getAudioInputStream(file4);
+					clip = AudioSystem.getClip();
+					clip.open(audio);
+					clip.start();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				} 
+			}
+			@Override
+			public void keyReleased(KeyEvent e) {
+			}
+		});
 		textField.setHorizontalAlignment(SwingConstants.RIGHT);
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		textField.setBounds(10, 11, 414, 68);
