@@ -18,7 +18,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TestLo {
 
@@ -121,6 +124,17 @@ public class TestLo {
 		panel.add(_Ku_Da);
 		
 		btnNewButton_SAiiiii = new JButton("Stat");
+		btnNewButton_SAiiiii.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				System.out.println("Akkk");
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				System.out.println("AkkkA");
+				trollVN();
+			}
+		});
 		btnNewButton_SAiiiii.setVisible(false);
 		btnNewButton_SAiiiii.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -162,5 +176,21 @@ public class TestLo {
 	}
 	public void end() {
 		this.frame.setVisible(false);
+	}
+	
+	public void trollVN() {
+		Random r = new Random();
+		int x = r.nextInt(154)+40;
+		int y = r.nextInt(67)+40;
+		btnNewButton_SAiiiii.setBounds(x, y, 89, 23);
+		File file = new File("E:\\JavaNew\\Test\\src\\com\\vq\\mac-quack.wav");
+		try {
+			AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+			clip = AudioSystem.getClip();
+			clip.open(audio);
+			clip.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 	}
 }
