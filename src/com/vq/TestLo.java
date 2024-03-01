@@ -32,6 +32,7 @@ public class TestLo {
 	private JLabel _Te;
 	private JLabel _Ku_Da;
 	private JButton btnNewButton_SAiiiii;
+	private JPanel panel;
 	Clip clip;
 
 	/**
@@ -86,7 +87,7 @@ public class TestLo {
 		frame.setTitle("My Frame");
 		frame.getContentPane().setLayout(null);
 
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel.setBounds(154, 67, 126, 46);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -127,7 +128,6 @@ public class TestLo {
 		btnNewButton_SAiiiii.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
-				System.out.println("Akkk");
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -146,7 +146,7 @@ public class TestLo {
 			}
 		});
 		btnNewButton_SAiiiii.setFont(new Font("Verdana", Font.PLAIN, 15));
-		btnNewButton_SAiiiii.setBounds(154, 143, 89, 23);
+		btnNewButton_SAiiiii.setBounds(139, 149, 89, 23);
 		frame.getContentPane().add(btnNewButton_SAiiiii);
 	}
 	
@@ -180,8 +180,8 @@ public class TestLo {
 	
 	public void trollVN() {
 		Random r = new Random();
-		int x = r.nextInt(154)+40;
-		int y = r.nextInt(67)+40;
+		int x = r.nextInt(154)*2;
+		int y = r.nextInt(67)*2;
 		btnNewButton_SAiiiii.setBounds(x, y, 89, 23);
 		File file = new File("E:\\JavaNew\\Test\\src\\com\\vq\\mac-quack.wav");
 		try {
